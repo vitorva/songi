@@ -1,0 +1,7 @@
+https://bobbyhadz.com/blog/javascript-error-err-require-esm-of-es-module-node-fetch
+
+https://vegibit.com/vue-js-express-tutorial/
+
+https://stackoverflow.com/questions/68834843/fetching-data-with-onmounted-hook-from-api-endpoint-and-url-parameter-vue-js-3
+
+https://stackoverflow.com/questions/44365577/proxy-in-package-json-not-affecting-fetch-request

@@ -25,7 +25,9 @@ onMounted(async () => {
     </h1>
     <div class = "container">
         <div v-for="playlist in playlists"> 
-            <div class = "thumbnail"></div>
+            <div class = "thumbnail">
+                <img :src="playlist.picture"/>
+            </div>
         </div>
     </div>
 </div>
