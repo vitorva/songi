@@ -18,7 +18,7 @@
   position: fixed;
   left: 0;
   bottom: 0;
-  height: 20%;
+  height: 15%;
   width: 100%;
   background-color: yellow;
   text-align: center;
