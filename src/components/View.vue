@@ -1,8 +1,5 @@
 <script setup>
 
-// Créer des thumbnail vide ici
-
-
 </script>
 
 
