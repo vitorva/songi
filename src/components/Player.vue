@@ -21,7 +21,6 @@
   height: 20%;
   width: 100%;
   background-color: yellow;
-  color: white;
   text-align: center;
 }
 
