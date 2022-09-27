@@ -30,7 +30,7 @@ app.get('/test', (req, res) => {
   });
 
   // One playlist
-  app.get('/api/playlists/:id', (req, res) => {
+  app.get('/api/playlist/:id', (req, res) => {
     fetch('https://api.deezer.com/playlist/' + req.params.id, {
     })
     .then(data => data.json())
