@@ -19,7 +19,7 @@
     margin-left: 50%;
     height: 80%;
     width: 50%;
-    background-color: blue; 
+    background-color:  rgb(247, 250, 252); 
 }
 
 </style>

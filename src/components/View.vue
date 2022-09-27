@@ -3,6 +3,7 @@
 // Créer des thumbnail vide ici
 
 import { ref, onMounted } from 'vue';
+import { RouterLink } from 'vue-router';
 
 // Appel a l'api
 
@@ -21,12 +22,14 @@ onMounted(async () => {
 <template>
 <div class="view">
     <h1>
-        Playlist
+        Playlists
     </h1>
     <div class = "container">
         <div v-for="playlist in playlists"> 
-            <div class = "thumbnail">
-                <img :src="playlist.picture"/>
+            <div class = "playlist-item">
+                <router-link :to="{ name: 'playlist', params: { id: playlist.id } }"><img :src="playlist.picture_medium"/></router-link>
+                <b>{{playlist.title}}</b>
+                <span>{{playlist.user.name}}</span>
             </div>
         </div>
     </div>
@@ -39,7 +42,7 @@ onMounted(async () => {
     position: absolute;
     height: 80%;
     width: 50%;
-    background-color: red; 
+    background-color: white; 
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -50,11 +53,17 @@ onMounted(async () => {
     justify-content: space-around;
 }
 
-.thumbnail {
-    height: 300px;
+.playlist-item {
+    display : flex;
+    flex-direction: column;
     width: 200px;
-    background-color: green;
+    height: 300px;
     margin: 10px;
+}
+
+.playlist-item img {
+  width: 100%;
+  height: auto;
 }
 
 </style>
