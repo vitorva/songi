@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
+import TrackItem from './TrackItem.vue';
 
 const props = defineProps({
     id: String
@@ -52,20 +53,20 @@ onMounted(async () => {
             </div>
         </div>
 
-        <!-- TRACKITEM -->
-        <div v-for="track in tracks"><img :src="track.album.cover_small" /> {{track.title}} </div>
+        <TrackItem v-for="(item, index) in tracks" :id="item.id" :track="item" :index="index" />
+
     </div>
 </template>
 
 <style scoped>
-    .picture {
-      width: 15rem;
-      height: 15rem;
-      margin-right: 2rem;
-    }
-  
-    .header {
-      display: flex;
-      align-items: center;
-    }
-  </style>
+.picture {
+    width: 15rem;
+    height: 15rem;
+    margin-right: 2rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+</style>

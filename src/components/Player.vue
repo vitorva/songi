@@ -5,11 +5,31 @@
 
 
 <template>
-<div class="player">
+  <div class="player">
     <h1>
-        Player
+      Player
     </h1>
-</div>
+
+    <div class="infos" v-if="!currentTrack"></div> <!-- Placeholder -->
+    <div class="infos" v-if="currentTrack">
+      <img class="picture" :src="currentTrack.album.cover" alt="Picture">
+      <div>
+        <b>{{ currentTrack.title }}</b>
+        <br>
+        <span>{{ currentTrack.artist.name }}</span>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <span class="arrow" @click="previous">◂◂</span>
+      <audio id="audioPlayer" ref="audioPlayer" controls autoplay :src="preview">
+        Your browser does not support the <code>audio</code> element.
+      </audio>
+      <span class="arrow" @click="next">▸▸</span>
+    </div>
+
+  </div>
 
 </template>
 
@@ -23,5 +43,4 @@
   background-color: yellow;
   text-align: center;
 }
-
 </style>
