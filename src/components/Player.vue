@@ -1,4 +1,14 @@
 <script setup>
+import { useStore } from 'vuex'
+
+const store = useStore()
+
+/* Not working with composition API !
+function preview() {
+  console.log("preview !!!!!!", store.state.preview)
+  return store.state.preview;
+}
+*/
 
 
 </script>
@@ -23,7 +33,7 @@
     <!-- Controls -->
     <div class="controls">
       <span class="arrow" @click="previous">◂◂</span>
-      <audio id="audioPlayer" ref="audioPlayer" controls autoplay :src="preview">
+      <audio id="audioPlayer" ref="audioPlayer" controls autoplay :src="store.state.preview">
         Your browser does not support the <code>audio</code> element.
       </audio>
       <span class="arrow" @click="next">▸▸</span>

@@ -14,13 +14,23 @@ function addToQueue() {
     console.log("queue", store.state.queue)
 }
 
+function playTrack() {
+    store.dispatch('addToQueue', props.track);
+    store.dispatch('playLastTrack', props.track);
+
+    console.log("props.track", props.track)
+    console.log(" store.state", store.state)
+    console.log("preview", store.state.preview)
+}
+
 </script>
 
 <template>
     <div>
         <!-- {{id}} - {{track}} - {{index}} -->
-        <img :src="track.album.cover_small" /> {{track.title}}
-        <button @click="addToQueue">click on me</button>
+        <div @click="playTrack">
+            <img :src="track.album.cover_small" /> {{track.title}}
+        </div>
     </div>
 </template>
 
