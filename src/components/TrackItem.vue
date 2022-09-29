@@ -1,4 +1,5 @@
 <script setup>
+import { useStore } from 'vuex'
 
 const props = defineProps({
     id: Number,
@@ -6,11 +7,11 @@ const props = defineProps({
     index: Number
 })
 
+const store = useStore()
 
 function addToQueue() {
-    console.log("store", $store);
-    store.dispatch('addToQueue', track.value);
-    console.log("queue", store.state.queue);
+    store.dispatch('addToQueue', props.track)
+    console.log("queue", store.state.queue)
 }
 
 </script>
