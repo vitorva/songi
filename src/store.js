@@ -23,6 +23,9 @@ const mutations = {
         state.queuePtr = 0;
         state.currentTrack = null;
         state.preview = null;
+    },
+    removeTrack(state, index){
+       //state.queue.splice(index,1); // TODO : Handle state correctly
     }
 }
 
@@ -56,6 +59,9 @@ const actions = {
     resetQueue({ commit }) {
         commit('resetQueue');
     },
+    removeTrack({commit}, index){
+        commit('removeTrack', index)
+    }
 }
 
 // A Vuex instance is created 

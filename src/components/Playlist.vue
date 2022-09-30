@@ -53,7 +53,7 @@ onMounted(async () => {
             </div>
         </div>
 
-        <TrackItem v-for="(item, index) in tracks" :id="item.id" :track="item" :index="index" />
+        <TrackItem v-for="(item, index) in tracks" :id="item.id" :track="item" :index="index" :btnQueue="false" />
 
     </div>
 </template>

@@ -1,5 +1,6 @@
 <script setup>
 import { useStore } from 'vuex'
+import { ref, onMounted } from 'vue';
 
 const store = useStore()
 
@@ -10,7 +11,15 @@ function preview() {
 }
 */
 
+const audioPlayer = ref(null);
 
+onMounted(() => {
+
+  audioPlayer.value.onended = () => {
+    store.dispatch('next');
+  };
+
+});
 </script>
 
 
