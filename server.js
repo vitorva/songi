@@ -13,6 +13,9 @@ app.use(express.static("public"));
 // Serve the src directory
 app.use("/src", express.static("src"));
 
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
+
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`listening on ${port}`);
