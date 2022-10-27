@@ -28,22 +28,19 @@ app.get("/test", (req, res) => {
 });
 
 // Top playlists
-app.get(
-  "https://songifyy.herokuapp.com/api/playlists/top/:limit",
-  (req, res) => {
-    fetch(
-      "https://api.deezer.com/chart/0/playlists?limit=" + req.params.limit,
-      {}
-    )
-      .then((data) => data.json())
-      .then((json) => {
-        res.send(json);
-      });
-  }
-);
+app.get("/api/playlists/top/:limit", (req, res) => {
+  fetch(
+    "https://api.deezer.com/chart/0/playlists?limit=" + req.params.limit,
+    {}
+  )
+    .then((data) => data.json())
+    .then((json) => {
+      res.send(json);
+    });
+});
 
 // One playlist
-app.get("https://songifyy.herokuapp.com/api/playlist/:id", (req, res) => {
+app.get("/api/playlist/:id", (req, res) => {
   fetch("https://api.deezer.com/playlist/" + req.params.id, {})
     .then((data) => data.json())
     .then((json) => {
