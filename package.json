@@ -3,8 +3,8 @@
   "name": "songi",
   "version": "0.0.0",
   "scripts": {
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 4173",
@@ -18,11 +18,11 @@
     "node-fetch": "^3.2.10",
     "vue": "^3.2.38",
     "vue-router": "^4.1.5",
-    "vuex": "^4.0.2"
+    "vuex": "^4.0.2",
+    "vite": "^3.2.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.0.3",
-    "vite": "^3.0.9"
+    "@vitejs/plugin-vue": "^3.0.3"
   },
   "proxy": "http://localhost:4000"
 }
