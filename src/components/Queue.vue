@@ -1,5 +1,12 @@
 <script setup>
+import { useStore } from 'vuex'
+import TrackItem from './TrackItem.vue';
 
+const store = useStore()
+
+function reset(){
+    store.dispatch("resetQueue")
+}
 
 </script>
 
@@ -9,6 +16,10 @@
     <h1>
         Queue
     </h1>
+    <button @click="reset">RESET</button>
+
+    <TrackItem v-for="(item, index) in store.state.queue" :id="item.id" :track="item" :index="index" :btnQueue="true"/>
+
 </div>
 
 </template>
@@ -19,7 +30,7 @@
     margin-left: 50%;
     height: 80%;
     width: 50%;
-    background-color: blue; 
+    background-color:  rgb(247, 250, 252); 
 }
 
 </style>
