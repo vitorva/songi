@@ -1,36 +1,66 @@
-<script setup>
-import { useStore } from 'vuex'
-import TrackItem from './TrackItem.vue';
-
-const store = useStore()
-
-function reset(){
-    store.dispatch("resetQueue")
-}
-
-</script>
-
-
 <template>
-<div class="queue">
-    <h1>
-        Queue
-    </h1>
-    <button @click="reset">RESET</button>
-
-    <TrackItem v-for="(item, index) in store.state.queue" :id="item.id" :track="item" :index="index" :btnQueue="true"/>
-
-</div>
-
+  <div class="queue">
+    <p class="title">
+      <span>
+        Queue<span class="soft"> • {{ queue.length }} tracks</span>
+      </span>
+      <span v-if="queue.length > 0" class="material-icons reset" @click="resetQueue">
+        clear
+      </span>
+    </p>
+    <TrackItem
+        v-for="(item, index) in queue"
+        :key="item.id"
+        :track="item"
+        :queue-btn="false"
+        :index="index"
+    />
+  </div>
 </template>
 
-<style>
-.queue {
-    position: absolute;
-    margin-left: 50%;
-    height: 80%;
-    width: 50%;
-    background-color:  rgb(247, 250, 252); 
-}
+<script>
+import TrackItem from "@/components/TrackItem";
 
+export default {
+  name: "Queue",
+  components: {
+    TrackItem
+  },
+  computed: {
+    queue() {
+      return this.$store.state.queue;
+    }
+  },
+  methods: {
+    resetQueue() {
+      this.$store.dispatch('resetQueue');
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+  .queue {
+    flex-shrink: 0;
+    margin-bottom: 75px;
+    background: #f7fafc;
+    width: 26rem;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow-y: auto;
+    padding: 2rem;
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .reset {
+    cursor: pointer;
+  }
 </style>
