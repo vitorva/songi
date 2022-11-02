@@ -1,1 +1,1 @@
-web: npm run express; npm run serve
+web: npm start
