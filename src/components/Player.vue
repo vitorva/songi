@@ -35,13 +35,13 @@ function next() {
 
 <template>
   <div class="player">
-    <div v-if="!store.currentTrack"></div> <!-- Placeholder -->
-    <div v-if="store.currentTrack">
-      <img class="picture" :src="currentTrack.album.cover" alt="Picture">
+    <div v-if="!store.state.currentTrack"></div> <!-- Placeholder -->
+    <div v-if="store.state.currentTrack">
+      <img class="picture" :src="store.state.currentTrack.album.cover" alt="Picture">
       <div>
-        <b>{{ store.currentTrack.title }}</b>
+        <b>{{ store.state.currentTrack.title }}</b>
         <br>
-        <span>{{ store.currentTrack.artist.name }}</span>
+        <span>{{ store.state.currentTrack.artist.name }}</span>
       </div>
     </div>
 
