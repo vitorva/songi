@@ -25,12 +25,8 @@ onMounted(() => {
 
 <template>
   <div class="player">
-    <h1>
-      Player
-    </h1>
-
-    <div class="infos" v-if="!currentTrack"></div> <!-- Placeholder -->
-    <div class="infos" v-if="currentTrack">
+    <div v-if="!currentTrack"></div> <!-- Placeholder -->
+    <div v-if="currentTrack">
       <img class="picture" :src="currentTrack.album.cover" alt="Picture">
       <div>
         <b>{{ currentTrack.title }}</b>
@@ -55,11 +51,36 @@ onMounted(() => {
 <style>
 .player {
   position: fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  background-color: white;
   left: 0;
+  right: 0;
   bottom: 0;
-  height: 15%;
-  width: 100%;
-  background-color: yellow;
-  text-align: center;
+  height: 75px;
+  border-top: 2px solid #eff3f7;
+}
+
+.player .picture {
+  height: 100%;
+  border-radius: 0;
+  margin-right: 1rem;
+}
+
+.player .controls {
+  display: flex;
+  align-items: center;
+}
+
+.player .arrow {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #474747;
+}
+
+#audioPlayer {
+  margin: 0 1rem 0 1rem;
+  border-radius: 100px;
 }
 </style>
