@@ -40,7 +40,7 @@ function currentTrack() {
 
 function isPlaying() {
 
-    return currentTrack() && this.currentTrack().id === props.track.id;
+    return currentTrack() !== null && currentTrack() !== undefined && this.currentTrack().id === props.track.id;
 }
 
 </script>

@@ -1,6 +1,6 @@
 {
-  "homepage": "https://vitorva.github.io/songi",
-  "name": "songi",
+  "homepage": "https://vitorva.github.io/songify",
+  "name": "songify",
   "version": "0.0.0",
   "scripts": {
     "predeploy": "npm run build",
