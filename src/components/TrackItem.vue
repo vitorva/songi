@@ -35,7 +35,11 @@ function playTrack() {
 }
 
 function currentTrack() {
-    return store.state.currentTrack;
+    if (store !== undefined) {
+
+        return store.state.currentTrack;
+    }
+    return null
 }
 
 function isPlaying() {
