@@ -31,7 +31,6 @@ function reset() {
     flex-shrink: 0;
     margin-bottom: 75px;
     background: #f7fafc;
-    width: 26rem;
     top: 0;
     bottom: 0;
     right: 0;
@@ -48,5 +47,12 @@ function reset() {
 
 .reset {
     cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+    .queue {
+        width: 26rem;
+    }
+
 }
 </style>

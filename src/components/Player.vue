@@ -79,6 +79,7 @@ function next() {
 }
 
 .player .controls {
+  min-width: 10px;
   display: flex;
   align-items: center;
 }

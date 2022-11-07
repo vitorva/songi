@@ -57,13 +57,27 @@ onMounted(async () => {
 
 <style scoped>
 .picture {
-    width: 15rem;
-    height: 15rem;
-    margin-right: 2rem;
+    width: 10rem;
+    height: 10rem;
+    margin-right: 1rem;
 }
 
 .header {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 1024px) {
+    .picture {
+        width: 15rem;
+        height: 15rem;
+        margin-right: 2rem;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+    }
 }
 </style>

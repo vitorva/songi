@@ -39,6 +39,7 @@ onMounted(async () => {
 
 <style>
 .home {
+    min-width: 150px;
     overflow-y: scroll;
 }
 
@@ -52,13 +53,25 @@ onMounted(async () => {
 .playlist-item {
     display: flex;
     flex-direction: column;
-    width: 200px;
-    height: 300px;
-    margin: 10px;
+    width: 150px;
+    height: 150px;
+    margin: 8px;
 }
+
 
 .playlist-item img {
     width: 100%;
     height: auto;
+}
+
+@media (min-width: 1024px) {
+    .playlist-item {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        height: 300px;
+        margin: 10px;
+    }
+
 }
 </style>
