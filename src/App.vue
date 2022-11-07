@@ -13,13 +13,19 @@ function selectCurrentTrack(track) {
 </script>
 
 <template>
-  <RouterView></RouterView>
+
+  <RouterLink to="/"> <a class="link" href="/"><img alt="Vue logo" class="logo" src="./assets/logo.svg" width="40"
+        height="40" /></a></RouterLink>
+
+
+  <RouterView class="view"></RouterView>
   <Queue />
   <Player />
 </template>
 
 <style>
 body {
+  overflow-y: hidden;
   margin: 0;
 }
 
@@ -34,8 +40,6 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .view {
@@ -62,5 +66,9 @@ img {
   filter: brightness(1.1);
   transform: scale(1.01);
   text-decoration: underline;
+}
+
+.logo {
+  margin: 10px;
 }
 </style>
