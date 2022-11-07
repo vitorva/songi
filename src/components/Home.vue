@@ -10,7 +10,7 @@ import { RouterLink } from 'vue-router';
 const playlists = ref(null)
 
 onMounted(async () => {
-    const values = await fetch("http://46.101.222.19:4000/api/playlists/top/15")
+    const values = await fetch("https://46.101.222.19:4000/api/playlists/top/15")
     const jsonValues = await values.json()
     playlists.value = jsonValues["data"]
     console.log("playlists", playlists.value)
