@@ -36,7 +36,6 @@ function playTrack() {
 
 function currentTrack() {
     if (store !== undefined) {
-
         return store.state.currentTrack;
     }
     return null
@@ -60,9 +59,9 @@ function isPlaying() {
 -->
 
     <div class="track">
-        <img class="picture-song clickable" :src="track.album.cover_small" alt="Picture" @click="playTrack">
+        <img class="picture-song clickable" :src="track.album.cover_small" alt="Picture" @click="playTrack()">
         <p>
-            <b :class="{ 'clickable': true, 'isPlaying': isPlaying() }" @click="playTrack">{{ track.title }}</b>
+            <b :class="{ 'clickable': true, 'isPlaying': isPlaying() }" @click="playTrack()">{{ track.title }}</b>
             <br>
             {{ track.artist.name }}
             <br>
