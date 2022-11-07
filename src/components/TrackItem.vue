@@ -32,18 +32,14 @@ function playTrack() {
     console.log("props.track", props.track)
     console.log(" store.state", store.state)
     console.log("preview", store.state.preview)
+    console.log("currenttrack", store.state.currentTrack)
 }
 
-function currentTrack() {
-    if (store.state !== undefined) {
-        return store.state.currentTrack;
-    }
-    return null
-}
+
 
 function isPlaying() {
 
-    return currentTrack() !== null && currentTrack() !== undefined && this.currentTrack().id === props.track.id;
+    return store.state.currentTrack !== null && store.state.currentTrack !== undefined && store.state.currentTrack.id === props.track.id;
 }
 
 </script>
