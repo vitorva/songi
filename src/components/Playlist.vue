@@ -35,30 +35,31 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div class="view">
-        <div>
-            <RouterLink to="/">&lt Back to playlists</RouterLink>
-        </div>
+    <div class="playlist">
+        <RouterLink to="/">&lt Back to playlists</RouterLink>
+
         <div class="header">
             <img class="picture" :src="picture" alt="Picture">
             <div>
-                <p>PLAYLIST</p>
+                <p class="soft">PLAYLIST</p>
                 <h2>{{ title }}</h2>
                 <p>
-                    <span>By</span> {{ creator }}
+                    <span class="soft">By</span> {{ creator }}
                 </p>
-                <p>
+                <p class="soft">
                     {{ `${year} • ${nbTracks} songs • ${duration} minutes` }}
                 </p>
             </div>
         </div>
 
-        <TrackItem v-for="(item, index) in tracks" :id="item.id" :track="item" :index="index" :btnQueue="false" />
+        <TrackItem v-for="(item, index) in tracks" :id="item.id" :track="item" :index="index" :queueBtn="true" />
 
     </div>
 </template>
 
 <style scoped>
+.playlist {}
+
 .picture {
     width: 15rem;
     height: 15rem;

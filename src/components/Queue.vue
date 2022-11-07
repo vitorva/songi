@@ -31,12 +31,15 @@ function reset() {
     flex-shrink: 0;
     margin-bottom: 75px;
     background: #f7fafc;
+    background-color: red;
+    height: 100%;
     width: 26rem;
     top: 0;
     bottom: 0;
     right: 0;
     overflow-y: auto;
     padding: 2rem;
+    overflow-y: scroll;
 }
 
 .title {

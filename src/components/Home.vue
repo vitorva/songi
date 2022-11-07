@@ -20,23 +20,29 @@ onMounted(async () => {
 
 
 <template>
-    <h1>
-        Playlists
-    </h1>
-    <div class="playlists">
-        <div v-for="playlist in playlists">
-            <div class="playlist-item">
-                <router-link :to="{ name: 'playlist', params: { id: playlist.id } }"><img
-                        :src="playlist.picture_medium" /></router-link>
-                <b>{{ playlist.title }}</b>
-                <span>{{ playlist.user.name }}</span>
+    <div class="home">
+        <h1>
+            Playlists
+        </h1>
+        <div class="playlists">
+            <div v-for="playlist in playlists">
+                <div class="playlist-item">
+                    <router-link :to="{ name: 'playlist', params: { id: playlist.id } }"><img
+                            :src="playlist.picture_medium" /></router-link>
+                    <b>{{ playlist.title }}</b>
+                    <span>{{ playlist.user.name }}</span>
+                </div>
             </div>
         </div>
     </div>
-
 </template>
 
 <style>
+.home {
+    background-color: yellow;
+    overflow-y: scroll;
+}
+
 .playlists {
     display: flex;
     flex-wrap: wrap;
