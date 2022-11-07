@@ -35,7 +35,8 @@ function reset() {
     bottom: 0;
     right: 0;
     overflow-y: auto;
-    padding: 2rem;
+    padding: 1rem;
+    width: 10rem;
 }
 
 .title {
@@ -43,6 +44,7 @@ function reset() {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .reset {

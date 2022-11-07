@@ -57,8 +57,8 @@ onMounted(async () => {
 
 <style scoped>
 .picture {
-    width: 10rem;
-    height: 10rem;
+    width: 7rem;
+    height: 7rem;
     margin-right: 1rem;
 }
 

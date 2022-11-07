@@ -38,8 +38,11 @@ onMounted(async () => {
 </template>
 
 <style>
+h1 {
+    font-size: small;
+}
+
 .home {
-    min-width: 150px;
     overflow-y: scroll;
 }
 
@@ -53,9 +56,9 @@ onMounted(async () => {
 .playlist-item {
     display: flex;
     flex-direction: column;
-    width: 150px;
-    height: 150px;
-    margin: 8px;
+    width: 100px;
+    height: 200px;
+    margin: 5px;
 }
 
 
@@ -70,7 +73,7 @@ onMounted(async () => {
         flex-direction: column;
         width: 200px;
         height: 300px;
-        margin: 10px;
+        margin: 15px;
     }
 
 }

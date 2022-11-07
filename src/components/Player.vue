@@ -38,11 +38,6 @@ function next() {
     <div v-if="!store.state.currentTrack"></div> <!-- Placeholder -->
     <div v-if="store.state.currentTrack">
       <img class="picture" :src="store.state.currentTrack.album.cover" alt="Picture">
-      <div>
-        <b>{{ store.state.currentTrack.title }}</b>
-        <br>
-        <span>{{ store.state.currentTrack.artist.name }}</span>
-      </div>
     </div>
 
     <!-- Controls -->
@@ -68,18 +63,18 @@ function next() {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 75px;
+  height: 150px;
   border-top: 2px solid #eff3f7;
 }
 
 .player .picture {
-  height: 100%;
+  height: 95%;
   border-radius: 0;
+  border: 0.05em solid black;
   margin-right: 1rem;
 }
 
 .player .controls {
-  min-width: 10px;
   display: flex;
   align-items: center;
 }
