@@ -39,7 +39,6 @@ onMounted(async () => {
 
 <style>
 .home {
-    background-color: yellow;
     overflow-y: scroll;
 }
 

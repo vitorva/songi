@@ -20,6 +20,16 @@ onMounted(() => {
   };
 
 });
+
+function previous() {
+  store.dispatch('previous');
+}
+
+function next() {
+  store.dispatch('next');
+}
+
+
 </script>
 
 

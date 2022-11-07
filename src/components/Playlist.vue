@@ -36,8 +36,6 @@ onMounted(async () => {
 
 <template>
     <div class="playlist">
-        <RouterLink to="/">&lt Back to playlists</RouterLink>
-
         <div class="header">
             <img class="picture" :src="picture" alt="Picture">
             <div>
@@ -58,8 +56,6 @@ onMounted(async () => {
 </template>
 
 <style scoped>
-.playlist {}
-
 .picture {
     width: 15rem;
     height: 15rem;
