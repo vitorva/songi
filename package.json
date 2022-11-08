@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 4173",
-    "start": "concurrently \"vite\" \"node server.js\""
+    "start": "concurrently \"vite --host --port 8080\" \"node server.js\""
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^3.0.3",

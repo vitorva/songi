@@ -16,7 +16,7 @@ const duration = ref(null);
 
 onMounted(async () => {
     console.log("id", props.id)
-    const values = await fetch(`http://localhost:4000/api/playlist/${props.id}`, {
+    const values = await fetch(`http://46.101.222.19:4000/api/playlist/${props.id}`, {
         "method": "GET"
     })
     const json = await values.json()
