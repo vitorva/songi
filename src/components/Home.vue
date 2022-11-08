@@ -68,6 +68,11 @@ h1 {
 }
 
 @media (min-width: 1024px) {
+
+    h1 {
+        font-size: 2em;
+    }
+
     .playlist-item {
         display: flex;
         flex-direction: column;
