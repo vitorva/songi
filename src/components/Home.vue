@@ -56,9 +56,9 @@ h1 {
 .playlist-item {
     display: flex;
     flex-direction: column;
-    width: 100px;
-    height: 200px;
-    margin: 5px;
+    width: 150px;
+    height: 250px;
+    margin: 10px;
 }
 
 

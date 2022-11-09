@@ -51,8 +51,13 @@ function reset() {
     cursor: pointer;
 }
 
+.queue {
+    display: none;
+}
+
 @media (min-width: 1024px) {
     .queue {
+        display: block;
         width: 26rem;
     }
 
