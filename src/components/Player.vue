@@ -19,6 +19,8 @@ onMounted(() => {
     store.dispatch('next');
   };
 
+  audioPlayer.value.volume = 0.4;
+
 });
 
 function previous() {
