@@ -45,15 +45,6 @@ function isPlaying() {
 </script>
 
 <template>
-    <!--
-    <div>
-        <div @click="playTrack">
-            <img :src="track.album.cover_small" /> {{ track.title }}
-        </div>
-        <button v-if="btnQueue" @click="removeTrack(index)">delete</button>
-    </div>
--->
-
     <div class="track">
         <img class="picture-song clickable" :src="track.album.cover_small" alt="Picture" @click="playTrack()">
         <p>

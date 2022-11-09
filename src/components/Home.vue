@@ -10,7 +10,7 @@ import { RouterLink } from 'vue-router';
 const playlists = ref(null)
 
 onMounted(async () => {
-    const values = await fetch("https://46.101.222.19:4000/api/playlists/top/15")
+    const values = await fetch("http://46.101.222.19:4000/api/playlists/top/15")
     const jsonValues = await values.json()
     playlists.value = jsonValues["data"]
     console.log("playlists", playlists.value)
@@ -56,9 +56,9 @@ h1 {
 .playlist-item {
     display: flex;
     flex-direction: column;
-    width: 100px;
-    height: 200px;
-    margin: 5px;
+    width: 150px;
+    height: 250px;
+    margin: 10px;
 }
 
 
@@ -68,6 +68,11 @@ h1 {
 }
 
 @media (min-width: 1024px) {
+
+    h1 {
+        font-size: 2em;
+    }
+
     .playlist-item {
         display: flex;
         flex-direction: column;

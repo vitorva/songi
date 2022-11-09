@@ -14,8 +14,8 @@ function selectCurrentTrack(track) {
 
 <template>
 
-  <RouterLink to="/"> <a class="link" href="/"><img alt="Vue logo" class="logo" src="./assets/logo.svg" width="40"
-        height="40" /></a></RouterLink>
+  <RouterLink class="mainLogo" to="/"> <a class="link" href="/"><img alt="Vue logo" class="logo" src="./assets/logo.svg"
+        width="40" height="40" /></a></RouterLink>
 
 
   <RouterView class="view"></RouterView>
@@ -24,6 +24,11 @@ function selectCurrentTrack(track) {
 </template>
 
 <style>
+.mainLogo {
+  position: fixed;
+  top: 0px;
+}
+
 body {
   overflow-y: hidden;
   margin: 0;
@@ -43,7 +48,9 @@ body {
 }
 
 .view {
+  margin-left: 40px;
   padding: 1rem 1rem;
+  margin-top: 0px;
   margin-bottom: 75px;
   overflow-y: scroll;
   flex-grow: 1;
