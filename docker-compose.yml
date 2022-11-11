@@ -1,9 +1,9 @@
 version: "3.9"
 services:
-  web:
+  songify:
     build: .
     ports:
       - "8080:8080"
       - "4000:4000"
-  songify:
     image: "songify"
+    
